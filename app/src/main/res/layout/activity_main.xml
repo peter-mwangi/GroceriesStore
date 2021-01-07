@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+<TextView
+    android:id="@+id/simple_text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_alignParentTop="true"
+    android:layout_marginTop="16dp"
+    android:text="Groceries Store"
+    android:textColor="@android:color/background_dark"
+    android:textSize="22sp"
+    android:fontFamily="sans-serif-condensed"/>
+
+    <ImageView
+        android:id="@+id/account_settings"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/ic_settings_black_24dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="16dp"
+        android:layout_alignParentTop="true"/>
+    <ImageView
+        android:id="@+id/shopping_cart"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/ic_shopping_cart_black_24dp"
+        android:layout_marginEnd="10dp"
+        android:layout_toLeftOf="@id/account_settings"
+        android:layout_marginTop="16dp"
+        android:layout_alignParentTop="true"/>
+
+    <EditText
+        android:id="@+id/search_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/shopping_cart"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:hint="Search here..."
+        android:drawableLeft="@drawable/ic_search_black_24dp"
+        android:drawablePadding="8dp"
+        android:paddingStart="5dp"
+        android:fontFamily="sans-serif-condensed"
+        android:inputType="text"
+        android:background="@drawable/search_bg"
+        android:padding="10dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/search_field"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        />
+
+
+</RelativeLayout>
